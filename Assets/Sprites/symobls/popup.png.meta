@@ -1,16 +1,10 @@
 fileFormatVersion: 2
-guid: 872aca296470c9d46b5df6df33860112
+guid: 773e17412d1a18f41883cb340c6fe427
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3737897332693287829
-    second: Bar_0
-  - first:
-      213: -7767105433804115491
-    second: Bar_1
-  - first:
-      213: -8416889693971880612
-    second: Bar_2
+      213: -6351617318852302439
+    second: popup_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -132,13 +126,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bar_0
+      name: popup_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 64
-        width: 96
-        height: 32
+        x: 78
+        y: 59
+        width: 1574
+        height: 743
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,52 +141,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5934012e1ddafd330800000000000000
-      internalID: 3737897332693287829
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bar_1
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 32
-        width: 96
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: dd1791582c2b53490800000000000000
-      internalID: -7767105433804115491
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Bar_2
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 0
-        width: 96
-        height: 33
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c55e82dfa63313b80800000000000000
-      internalID: -8416889693971880612
+      spriteID: 999e69863b58ad7a0800000000000000
+      internalID: -6351617318852302439
       vertices: []
       indices: 
       edges: []
@@ -211,9 +161,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Bar_0: 3737897332693287829
-      Bar_1: -7767105433804115491
-      Bar_2: -8416889693971880612
+      popup_0: -6351617318852302439
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
