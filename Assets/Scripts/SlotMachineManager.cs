@@ -82,12 +82,12 @@ public class SlotMachineManager : MonoBehaviour
 
         if (r1 == r2 && r2 == r3)
         {
-            resultText.text = " JACKPOT!";
+            resultText.text = "🔥 JACKPOT!";
             result = SlotResult.Jackpot;
         }
         else if (r1 == r2 || r2 == r3 || r1 == r3)
         {
-            resultText.text = " SMALL WIN!";
+            resultText.text = "✨ SMALL WIN!";
             result = SlotResult.SmallWin;
         }
         else
