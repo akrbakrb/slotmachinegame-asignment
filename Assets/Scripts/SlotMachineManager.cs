@@ -99,6 +99,8 @@ public class SlotMachineManager : MonoBehaviour
         payoutSystem.ProcessResult(result);
     }
 
+
+    // Added Handle animation
     private void PinHandle(bool spinning)
     {
         if (offImage != null)
