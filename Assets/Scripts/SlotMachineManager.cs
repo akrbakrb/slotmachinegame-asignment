@@ -5,6 +5,8 @@ using TMPro;
 
 public class SlotMachineManager : MonoBehaviour
 {
+    public bool IsSpinning => isSpinning;
+    
     [Header("Spin Indicator")]
     public GameObject offImage;
     public GameObject onImage;
@@ -25,10 +27,16 @@ public class SlotMachineManager : MonoBehaviour
     public float reel2Time = 2.5f;
     public float reel3Time = 3f;
 
-    private bool isSpinning;
+    private bool isSpinning;// Prevents multiple spins at the same time
 
+
+    /// <summary>
+    /// Called when the player presses the spin button.
+    /// Validates the bet and starts the spin sequence.
+    /// </summary>
     public void SpinWithBet(int betAmount)
     {
+         // Don't allow another spin while one is already running
         if (isSpinning)
             return;
 
