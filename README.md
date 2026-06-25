@@ -22,5 +22,5 @@ Open WebGLBuild/Files/Index.html
 - SlotMachineManager
 
 ## Bonus Features
-- Added 2  Symbols
+- Added extra Symbols
 - Added SFX and Background music
