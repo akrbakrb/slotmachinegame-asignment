@@ -1,4 +1,5 @@
 using System.Collections;
+
 using UnityEngine;
 using TMPro;
 
@@ -51,7 +52,9 @@ public class SlotMachineManager : MonoBehaviour
         isSpinning = true;
 
         PinHandle(true);
-        resultText.text = "SPINNING...";
+        resultText.text = "SPINNING!";
+
+        AudioManager.Instance.StartSpinningSound();
 
         // Start all reels together
         StartCoroutine(reel1.Spin(reel1Time));
@@ -63,6 +66,8 @@ public class SlotMachineManager : MonoBehaviour
             !reel1.IsSpinning &&
             !reel2.IsSpinning &&
             !reel3.IsSpinning);
+
+        AudioManager.Instance.StopSpinningSound();
 
         CheckResult();
 
@@ -82,17 +87,19 @@ public class SlotMachineManager : MonoBehaviour
 
         if (r1 == r2 && r2 == r3)
         {
-            resultText.text = "🔥 JACKPOT!";
+            resultText.text = " JACKPOT!";
+            AudioManager.Instance.PlayJackpotSound();
             result = SlotResult.Jackpot;
         }
         else if (r1 == r2 || r2 == r3 || r1 == r3)
         {
-            resultText.text = "✨ SMALL WIN!";
+            resultText.text = " SMALL WIN!";
+            AudioManager.Instance.PlayJackpotSound();
             result = SlotResult.SmallWin;
         }
         else
         {
-            resultText.text = "TRY AGAIN";
+            resultText.text = "TRY AGAIN!";
             result = SlotResult.TryAgain;
         }
 
@@ -109,4 +116,6 @@ public class SlotMachineManager : MonoBehaviour
         if (onImage != null)
             onImage.SetActive(spinning);
     }
+
+    
 }

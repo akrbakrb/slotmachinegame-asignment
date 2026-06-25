@@ -61,7 +61,7 @@ public class PayoutSystem : MonoBehaviour
 
     void UpdateUI()
     {
-        cashText.text = $"Cash: {CurrentCredits}";
+        cashText.text = CurrentCredits.ToString();
     }
 
     // ✨ FLASH EFFECT
@@ -79,10 +79,18 @@ public class PayoutSystem : MonoBehaviour
 
         cashText.color = flashColor;
 
-        yield return new WaitForSeconds(0.25f);
+        yield return new WaitForSeconds(1f);
 
         cashText.color = originalColor;
 
         flashRoutine = null;
     }
+
+    public void RestartGame()
+{
+    CurrentCredits = startingCredits;
+    CurrentBet = 0;
+
+    UpdateUI();
+}
 }
