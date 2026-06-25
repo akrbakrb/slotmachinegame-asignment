@@ -24,3 +24,6 @@ Open WebGLBuild/Files/Index.html
 ## Bonus Features
 - Added extra Symbols
 - Added SFX and Background music
+
+## Game Link
+-https://akrbakrb.github.io/slogmachinegame/
