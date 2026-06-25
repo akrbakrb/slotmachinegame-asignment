@@ -6,7 +6,7 @@ using TMPro;
 public class SlotMachineManager : MonoBehaviour
 {
     public bool IsSpinning => isSpinning;
-    
+
     [Header("Spin Indicator")]
     public GameObject offImage;
     public GameObject onImage;
@@ -36,7 +36,7 @@ public class SlotMachineManager : MonoBehaviour
     /// </summary>
     public void SpinWithBet(int betAmount)
     {
-         // Don't allow another spin while one is already running
+        // Don't allow another spin while one is already running
         if (isSpinning)
             return;
 
@@ -55,6 +55,12 @@ public class SlotMachineManager : MonoBehaviour
         StartCoroutine(SpinRoutine());
     }
 
+    /// <summary>
+    /// Controls the full spin process:
+    /// - Starts reels
+    /// - Waits for them to stop
+    /// - Checks results
+    /// </summary>
     private IEnumerator SpinRoutine()
     {
         isSpinning = true;
@@ -82,7 +88,9 @@ public class SlotMachineManager : MonoBehaviour
         PinHandle(false);
         isSpinning = false;
     }
-
+    // <summary>
+    /// Compares reel results and determines payout type.
+    /// </summary>
     private void CheckResult()
     {
         int r1 = reel1.ResultIndex;
@@ -125,5 +133,5 @@ public class SlotMachineManager : MonoBehaviour
             onImage.SetActive(spinning);
     }
 
-    
+
 }
