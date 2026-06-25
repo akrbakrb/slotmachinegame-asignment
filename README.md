@@ -14,7 +14,7 @@ A simple slot machine game built in Unity.
 Select Bet Amount to play.
 
 ## Build
-Open Build/WebGL/index.html
+Open WebGLBuild/Files/Index.html
 
 ## Technical Design
 - OOP architecture
